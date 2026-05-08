@@ -16,9 +16,6 @@ module Field {
 
     function resolveFieldValue(type) {
         switch(type) {
-            case TIME:
-                var clockTime = System.getClockTime();
-                return [clockTime.hour.format("%02d"), clockTime.min.format("%02d")];
             case DATE:
                 var date = Calendar.info(Time.now(), Time.FORMAT_SHORT);
                 return [date.day, date.month.format("%02d")];
