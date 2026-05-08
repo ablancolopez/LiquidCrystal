@@ -6,12 +6,12 @@
     <string id="SettingsShowBattery">Show battery percentage</string>
     <string id="SettingsShowTemperature">Show temperature</string>
 
-    <string id="Sun">Sun</string>
-    <string id="Mon">Mon</string>
-    <string id="Tue">Tue</string>
-    <string id="Wed">Wed</string>
-    <string id="Thu">Thu</string>
-    <string id="Fri">Fri</string>
-    <string id="Sat">Sat</string>
+    <string id="Sun">SUN</string>
+    <string id="Mon">MON</string>
+    <string id="Tue">TUE</string>
+    <string id="Wed">WED</string>
+    <string id="Thu">THU</string>
+    <string id="Fri">FRI</string>
+    <string id="Sat">SAT</string>
 
 </strings>
