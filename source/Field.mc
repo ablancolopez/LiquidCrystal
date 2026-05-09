@@ -1,18 +1,14 @@
 import Toybox.Lang;
-import Toybox.Math;
 import Toybox.System;
 import Toybox.Time;
 import Toybox.WatchUi;
-import Toybox.Weather;
 
 using Toybox.Time.Gregorian as Calendar;
 
 module Field {
-    const TIME = 0;
-    const DATE = 1;
-    const DAY_OF_WEEK = 2;
-    const BATTERY = 3;
-    const TEMPERATURE = 4;
+    const DATE = 0;
+    const DAY_OF_WEEK = 1;
+    const BATTERY = 2;
 
     function resolveFieldValue(type) {
         switch(type) {
@@ -25,10 +21,7 @@ module Field {
                 return [dayOfWeekString];
             case BATTERY:
                 var battery = System.getSystemStats().battery;
-                return [Math.floor(battery.toNumber())];
-            case TEMPERATURE:
-                var currentConditions = Weather.getCurrentConditions();
-                return [currentConditions.feelsLikeTemperature.format("%02d")];
+                return [battery.toNumber()];
             default:
                 throw new Lang.InvalidValueException(type);
         }
@@ -36,11 +29,9 @@ module Field {
 
     function resolveFieldFormat(type) {
         switch(type) {
-            case TIME: return "$1$:$2$";
             case DATE: return "$1$/$2$";
             case DAY_OF_WEEK: return "$1$";
             case BATTERY: return "$1$%";
-            case TEMPERATURE: return "$1$ºC";
             default: throw new Lang.InvalidValueException(type);
         }
     }

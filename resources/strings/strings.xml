@@ -1,11 +1,6 @@
 <strings>
     <string id="AppName">Liquid Crystal</string>
 
-    <string id="SettingsShowDate">Show date</string>
-    <string id="SettingsShowDayOfWeek">Show day of week</string>
-    <string id="SettingsShowBattery">Show battery percentage</string>
-    <string id="SettingsShowTemperature">Show temperature</string>
-
     <string id="Sun">SUN</string>
     <string id="Mon">MON</string>
     <string id="Tue">TUE</string>
